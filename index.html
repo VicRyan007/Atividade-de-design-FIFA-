@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="/app.js"></script>
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous"></script>
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="style.css">
+  <title>FIFA</title>
+  <link rel="shortcut icon"
+    href="https://upload.wikimedia.org/wikipedia/pt/thumb/e/e3/2022_FIFA_World_Cup.svg/1200px-2022_FIFA_World_Cup.svg.png"
+    type="image/x-icon">
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-lg rounded fixed-top">
+    <div class="container">
+      <a class="navbar-brand " href="#">
+        <p class="fs-1 text fw-bolder" style="color: blue;">FIFA</p>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Início</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#tabela">Tabelas de grupos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#estagio">Estádios</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#informações">Breves informações</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header>
+
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+          aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+          aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+          aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active"
+          style="background-image: url('https://images.unsplash.com/photo-1508087625439-de3978963553?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1473&q=80')">
+          <div class="carousel-caption">
+            <h5>Diga não a violência, no campo, todos são um !</h5>
+            <p>#QatarWorldCup2022</p>
+          </div>
+        </div>
+        <div class="carousel-item"
+          style="background-image: url('https://images.unsplash.com/photo-1637203725134-1bbdcc17bb91?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=947&q=80')">
+          <div class="carousel-caption">
+            <h5 style="color: black;">Será que a sua nação ganhará o troféu...?</h5>
+            <p>#QatarWorldCup2022</p>
+          </div>
+        </div>
+        <div class="carousel-item"
+          style="background-image: url('https://images.unsplash.com/photo-1602694489714-d8a41567d2a9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1030&q=80')">
+          <div class="carousel-caption">
+            <h5>Um lugar moderno em meio a um imenso deserto. Conheça o Qatar !</h5>
+            <p>QatarWorldCup2022</p>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </header>
+
+  <br id="estagio">
+
+
+  <!-- Estádios  -->
+
+  <div class="row row-cols-1 row-cols-md-2 g-6 ms-3 me-3">
+    <div class="col">
+      <div class="card">
+        <img src="estadios/Ahmad.jpg" class="card-img-top" alt="ahmad">
+        <div class="card-body">
+          <h5 class="card-title">Estádio Ahmad</h5>
+        </div>
+      </div>
+    </div>
+    <br>
+    <div class="col mt-3">
+      <div class="card">
+        <img src="estadios/974.jpg" class="card-img-top" alt="974">
+        <div class="card-body">
+          <h5 class="card-title">Estádio Ras Abu Aboud (974)</h5>
+        </div>
+      </div>
+    </div>
+    <br>
+    <div class="col mt-3">
+      <div class="card">
+        <img src="estadios/Al-Bayt.jpg" class="card-img-top" alt="Al-Bayt">
+        <div class="card-body">
+          <h5 class="card-title">Estádio Al Bayt</h5>
+        </div>
+      </div>
+    </div>
+    <br>
+    <div class="col mt-3">
+      <div class="card">
+        <img src="estadios/Al-Janoub.jpg" class="card-img-top" alt="al-janoub">
+        <div class="card-body">
+          <h5 class="card-title">Estádio Al Janoub</h5>
+        </div>
+      </div>
+    </div>
+    <br>
+    <div class="col mt-3 mb-3">
+      <div class="card">
+        <img src="estadios/Al-Thumama.jpg" class="card-img-top" alt="Al-Thumama">
+        <div class="card-body">
+          <h5 class="card-title">Estádio Al Thumama</h5>
+        </div>
+      </div>
+    </div>
+    <br>
+    <div class="col mt-3">
+      <div class="card">
+        <img src="estadios/Education City.jpg" class="card-img-top" alt="Education City">
+        <div class="card-body" id="tabela">
+          <h5 class="card-title">Estádio Education City</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Tabelas de jogos -->
+
+  <br>
+
+  <div>
+    <h2 class="text-center">Grupos</h2>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th scope="col">Grupo A</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                Catar
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Equador
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Senegal
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Holanda
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="col">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th scope="col">Grupo B</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                Inglaterra
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Irã
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Estados Unidos
+              </td>
+            </tr>
+            <tr>
+              <td>
+                País de Gales
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="col">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th scope="col">Grupo C</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                Argentina
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Arábia Saudita
+              </td>
+            </tr>
+            <tr>
+              <td>
+                México
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Polônia
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="col">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th scope="col">Grupo D</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                França
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Austrália
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Dinamarca
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Tunísia
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+    <div class="row">
+      <div class="col">
+
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th scope="col">Grupo E</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                Espanha
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Costa Rica
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Alemanha
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Japão
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="col">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th scope="col">Grupo F</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                Bélgica
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Canadá
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Marrocos
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Croácia
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="col">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th scope="col">Grupo G</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                Brasil
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Sérvia
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Suíça
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Camarões
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="col">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th scope="col">Grupo H</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                Portugal
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Gana
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Uruguai
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Coreia do Sul
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <br>
+
+  <h2 class="text-center mb-3" id="informações">Informações de interesse</h2>
+  <div class="accordion accordion-flush ms-3 me-3 mb-3 border border-2 rounded" id="accordionFlushExample">
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="flush-headingOne">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+          data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+          Quantas seleções irão jogar?
+        </button>
+      </h2>
+      <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+        data-bs-parent="#accordionFlushExample">
+        <div class="accordion-body">
+          <strong>
+            A FIFA desistiu de ampliar a Copa do Mundo, no Qatar, com 48 seleções. Desta forma, o torneio, que será
+            disputado entre novembro e dezembro de 2022, terá 32 participantes, de modo que a América do Sul continua
+            com suas quatro vagas 'e meia' para esta próxima edição. A proposta foi adiada para acontecer somente no
+            Mundial de 2026.
+
+            País anfitrião: 1 (Qatar)
+            UEFA (Europa): 13 representantes
+            Conmebol (América do Sul): 4 ou 5 representantes*
+            Concacaf (América Central e do Norte): 3 ou 5 representantes*
+            CAF (África): 5 representantes
+            AFC (Ásia): 4 ou 5 representantes*
+            OFC (Oceania): nenhum ou um representante*​
+            *Será mantida a disputa por vagas entre candidatos da Conmebol e OFC, AFC e Concacaf
+          </strong>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingTwo">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+            Horários dos jogos no Brasil
+          </button>
+        </h2>
+        <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
+          data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">
+            <strong>
+              Quinta-feira - 24 de novembro: 16h - BRASIL x Sérvia, no Lusail Stadium <br>
+              Segunda-feira - 28 de novembro: 13h - BRASIL x Suíça, no Stadium 974 <br>
+              Sexta-feira - 2 de dezembro: 16h - BRASIL x Camarões, no Lusail Stadium <br>
+              Oitavas e quartas de final: 12h e 16h (horário de Brasília); <br>
+              Semifinais: 16h (horário de Brasília); <br>
+              Disputa do terceiro lugar e final: 12h (horário de Brasília).
+            </strong>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+              Onde assistir os jogos?
+            </button>
+          </h2>
+          <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
+            data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+              <strong>
+                Até o momento, algumas das mais importantes emissoras de televisão que possuem direitos de transmissão
+                são: Rede Globo, SporTV, TNT, Space, ESPN e Fox Sports.
+              </strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+</body>
+
+<div class="container mt-4 footer">
+  <footer class="py-3 my-4">
+    <h3 class="text-center">Conheça mais sobre mim abaixo <i class="bi bi-emoji-smile"></i></h3>
+    <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+      <li class="nav-item"><a href="https://github.com/VicRyan007" class="nav-link px-2 "><i
+            class="bi bi-github"></i></a></li>
+      <li class="nav-item"><a href="https://www.instagram.com/rviktor_fc/" class="nav-link px-2 "><i
+            class="bi bi-instagram"></i></a></li>
+      <li class="nav-item"><a href="https://www.linkedin.com/in/ryan-viktor/" class="nav-link px-2 "><i
+            class="bi bi-linkedin"></i></a></li>
+    </ul>
+    <p class="text-center text-muted">© 2022 Ryan Víctor</p>
+  </footer>
+</div>
+
+</html>

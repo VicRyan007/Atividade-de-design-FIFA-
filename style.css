@@ -1,0 +1,37 @@
+.carousel-item {
+    height: 100vh;
+    min-height: 350px;
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
+  .nav-link{
+      font-size: 20px;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-weight: bold;
+      color: black;
+  }
+  .nav-link:hover{
+      color: blue;
+      background-color: darkgray;
+      border-radius: 30px;
+  }
+
+  h2{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: blue;
+  }
+
+  h5{
+      font-weight: bold;
+  }
+
+  p{
+      font-size: 15px;
+      font-weight: bold;
+      color: yellow   ;
+  }
+
