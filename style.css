@@ -25,13 +25,13 @@
     color: blue;
   }
 
-  h5{
+  h3{
       font-weight: bold;
   }
 
   p{
-      font-size: 15px;
+      font-size: 18px;
       font-weight: bold;
-      color: yellow   ;
+      color: crimson   ;
   }
 
